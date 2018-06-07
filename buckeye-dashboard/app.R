@@ -1,5 +1,11 @@
+library(jsonlite)
+library(httr)
 library(ggvis)
 library(shiny)
 library(shinydashboard)
+library(DT)
+library(plotly)
+library(reshape2)
+library(stringr)
 
 shinyApp(ui, server)
