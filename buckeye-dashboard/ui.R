@@ -26,7 +26,16 @@ frow1 <- fluidRow(
     width = 3
   )
 )
+frow2 <- fluidRow(
+  box(
+    title = "Data viewer",
+    status = "primary",
+    solidHeader = TRUE,
+    collapsible = TRUE,
+    width = 12
+  )
+)
 
-body <- dashboardBody(frow1)
+body <- dashboardBody(frow1, frow2)
 
 ui <- dashboardPage(title = "Buckeye Power Dashboard", header, sidebar, body)
