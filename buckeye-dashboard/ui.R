@@ -7,6 +7,8 @@ library(DT)
 library(plotly)
 library(reshape2)
 library(stringr)
+library(pracma)
+library(dplyr)
 
 header <- dashboardHeader(title = "Buckeye Power")
 
@@ -27,15 +29,16 @@ frow1 <- fluidRow(
     status = "primary",
     solidHeader = TRUE,
     collapsible = FALSE,
-    width = 9,
-    plotlyOutput("dartPlot")
+    width = 10,
+    height = "90vh",
+    plotlyOutput("dartPlot", width = "95%", height = "83vh")
   ),
   box(
     title = "Chart options",
     status = "primary",
     solidHeader = TRUE,
     collapsible = TRUE,
-    width = 3,
+    width = 2,
     selectInput("loc",
                 "Location",
                 choices = c("Cardinal2","Cardinal3","Greenville1","Greenville2","Greenville3","Greenville4","Mone1","Mone2","Mone3"),
@@ -43,17 +46,17 @@ frow1 <- fluidRow(
                 multiple = TRUE),
     dateInput("start_date",
               "Start date",
-              value = as.character(Sys.Date()-7),
+              value = as.character(Sys.Date()-3),
               min = "2010-01-01",
-              max = Sys.Date()+10),
+              max = Sys.Date()-1),
     dateInput("end_date",
              "End date",
-             value = as.character(Sys.Date()+1),
+             value = as.character(Sys.Date()-3),
              min = "2010-01-01",
-             max = Sys.Date()+10),
+             max = Sys.Date()-1),
     selectInput("mab",
-                "Moving average bars",
-                choices = c("None","7-Day","14-Day"),
+                "Moving average lines",
+                choices = c("None","7-Period","10-Period","14-Period"),
                 selected = "None",
                 multiple = FALSE),
     actionButton("update",

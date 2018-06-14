@@ -7,5 +7,7 @@ library(DT)
 library(plotly)
 library(reshape2)
 library(stringr)
+library(pracma)
+library(dplyr)
 
 shinyApp(ui, server)
