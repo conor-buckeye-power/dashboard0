@@ -180,3 +180,27 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 git add .
+]0;/cloud/project]0;rstudio-user@3619e9e50569: /cloud/project[01;32mrstudio-user@3619e9e50569[00m:[01;34m/cloud/project[00m$ git commit -m "Finalized module1"
+[master b1bd4b4] Finalized module1
+ 16 files changed, 198 insertions(+), 85 deletions(-)
+ rewrite .Rproj.user/239E1097/console06/INDEX001 (85%)
+]0;/cloud/project]0;rstudio-user@3619e9e50569: /cloud/project[01;32mrstudio-user@3619e9e50569[00m:[01;34m/cloud/project[00m$ git push -u orign master
+fatal: 'orign' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+]0;/cloud/project]0;rstudio-user@3619e9e50569: /cloud/project[01;32mrstudio-user@3619e9e50569[00m:[01;34m/cloud/project[00m$ git push -u origin master
+error: cannot run rpostback-askpass: No such file or directory
+Username for 'https://github.com': conor-buckeye-power
+error: cannot run rpostback-askpass: No such file or directory
+Password for 'https://conor-buckeye-power@github.com': 
+To https://github.com/conor-buckeye-power/dashboard0.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/conor-buckeye-power/dashboard0.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+]0;/cloud/project]0;rstudio-user@3619e9e50569: /cloud/project[01;32mrstudio-user@3619e9e50569[00m:[01;34m/cloud/project[00m$ git add .
